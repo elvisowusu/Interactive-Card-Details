@@ -29,9 +29,7 @@ function App() {
 
   return (
     <div className='font-SpaceGrotesk'>
-      <div className={` ${state.screenWidth >640?"bg-[url('./assets/bg-main-desktop.png')]":"bg-[url('./assets/bg-main-mobile.png')]"} bg-cover h-[17rem] w-[35rem]`}>
-        sfsdfh
-      </div>
+      <div className={` ${state.screenWidth >640?"bg-[url('./assets/bg-main-desktop.png')]":"bg-[url('./assets/bg-main-mobile.png')]"} bg-cover h-[17rem] w-[35rem]`}></div>
       <Cards/>
       <Form/>
     </div>
