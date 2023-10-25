@@ -13,6 +13,9 @@ export default {
           'Lightgrayishviolet': 'hsl(270, 3%, 87%)',
           'Darkgrayishviolet': 'hsl(279, 6%, 55%)',
           'Verydarkviolet': 'hsl(278, 68%, 11%)',
+      },
+      fontFamily:{
+        SpaceGrotesk: 'Space Grotesk, sans-serif',
       }
     },
   },
