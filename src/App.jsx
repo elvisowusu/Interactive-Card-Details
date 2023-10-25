@@ -31,7 +31,14 @@ function App() {
   return (
     <div>
       {state.screenWidth > 640? (<img src={desktop} alt='destop background'/>):(<img className='w-full' src={mobile} alt='moblie background'/>)}
-      
+      <div className='bg-pink-300 h-[31rem]'>
+        <div className={`bg-[url('./assets/bg-card-front.png')] h-[15.3rem] w-[27.97rem] rounded-lg`}>
+          
+        </div>
+        <div className={`bg-[url('./assets/bg-card-back.png')] h-[15.3rem] w-[27.97rem] rounded-lg`}>
+
+        </div>
+      </div>
     </div>
   )
 }
