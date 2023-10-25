@@ -18,7 +18,7 @@ export default function Form(){
                <div>
                         <label className="tracking-[0.16rem] font-bold text-[1.05rem]">EXP. DATE (MM/YY)</label>
                         <div className="flex gap-3">
-                            <input className="border block mt-[0.8rem] h-[4.25rem] w-[6.1rem] rounded-xl placeholder:text-[1.6rem] pt-2 px-[2rem]" type="text" placeholder="MM" />
+                            <input className="border block mt-[0.8rem] h-[4.25rem] w-[6.1rem] rounded-xl placeholder:text-[1.6rem] pt-2 px-[2rem]" type="text" placeholder="" />
                             <input className="border block mt-[0.8rem] h-[4.25rem] w-[6.1rem] rounded-xl placeholder:text-[1.6rem] pt-2 px-[2rem]" type="text" placeholder="YY"/>
                         </div>
                 </div> 
