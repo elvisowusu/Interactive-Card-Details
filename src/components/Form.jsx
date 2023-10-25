@@ -4,8 +4,20 @@ import mark from '../assets/icon-complete.svg'
 
 export default function Form(){
     return(
-        <div className="h-12">
+        
+        <form className=" mt-[9rem]">
+            <div>
+                <label>CARDHOLDER NAME</label>
+                <input className="border block" type="text" />
+            </div>
+            <div>
+                <label>CARDHOLDER NAME</label>
+                <input className="border block" type="text" />
+            </div>
+
             
-        </div>
+
+        </form>
+        
     )
 }
