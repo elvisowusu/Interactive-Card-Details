@@ -28,7 +28,7 @@ function App() {
   },[])
 
   return (
-    <div className='relative font-SpaceGrotesk bg-green-300 w-[35.5rem] flex flex-col '>
+    <div className='relative font-SpaceGrotesk w-[35.5rem] flex flex-col '>
       <div className={`${state.screenWidth >640?"bg-[url('./assets/bg-main-desktop.png')]":"bg-[url('./assets/bg-main-mobile.png')]"} bg-cover h-[23rem] w-[35.5rem]`}></div>
       <Cards/>
       <Form/>
