@@ -4,8 +4,8 @@ import {FaCircle,FaRegCircle} from 'react-icons/fa'
 
 export default function Cards(){
     return(
-        <div className="absolute top-[1rem] left-[6.5rem] w-full ">
-          <div className={`absolute top-[8.65rem] right-[2rem]  sm:relative  bg-[url('./assets/bg-card-front.png')] h-[15.3rem] w-[27.97rem] rounded-lg flex flex-col justify-between p-[1.8rem]`}>
+        <div className="absolute top-[3.3rem] left-[3.2rem]">
+          <div className={`absolute top-[8.65rem] left-0   sm:relative  bg-[url('./assets/bg-card-front.png')] h-[15.3rem] w-[27.97rem] rounded-lg flex flex-col justify-between p-[1.8rem] right-[2rem]`}>
             <div className="flex items-center gap-3">
               <FaCircle className="w-[3.1rem] h-[3.1rem] text-White"/> 
               <FaRegCircle className="w-[1.3rem] h-[1.3rem] text-Lightgrayishviolet"/>
@@ -18,7 +18,7 @@ export default function Cards(){
               </div>
             </div>
           </div>
-          <div className={`flex justify-end items-center tracking-[0.14rem] text-White p-[3.8rem] bg-[url('./assets/bg-card-back.png')] h-[15.3rem] w-[27.97rem] rounded-lg `}>
+          <div className={`flex justify-end items-center tracking-[0.14rem] text-White p-[3.8rem] bg-[url('./assets/bg-card-back.png')] h-[15.3rem] w-[27.97rem] rounded-lg ml-[6rem]`}>
            <p className="mb-[0.4rem]">000</p> 
           </div>
         </div>
