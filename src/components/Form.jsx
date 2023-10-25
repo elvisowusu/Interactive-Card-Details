@@ -1,25 +1,47 @@
 import React from "react";
+import {useForm} from 'react-hook-form'
 import logo from '../assets/card-logo.svg'
 import mark from '../assets/icon-complete.svg'
 
 export default function Form(){
+    const {register,handleSubmit}=useForm();
+
+    const onSubmit=(data)=>{
+        console.log(data);
+    }
     return(
         
-        <form className="mt-[8.88rem] px-[1.2rem] flex flex-col ">
+        <form onSubmit={handleSubmit(onSubmit)} className="mt-[8.88rem] px-[1.2rem] flex flex-col ">
             <div>
                 <label className="tracking-[0.2rem] font-bold text-[1.05rem] text-Verydarkviolet" >CARDHOLDER NAME</label>
-                <input className="border border-Lightgrayishviolet outline-none focus:border-Darkgrayishviolet block mt-[0.8rem] h-[4.2rem] rounded-xl text-[1.6rem] placeholder:text-[1.6rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem] w-[33rem]" type="text" placeholder="e.g Jane Appleased"/>
+                <input className="border border-Lightgrayishviolet outline-none focus:border-Darkgrayishviolet block mt-[0.8rem] h-[4.2rem] rounded-xl text-[1.6rem] placeholder:text-[1.6rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem] w-[33rem]"
+                       type="text" 
+                       placeholder="e.g Jane Appleased"
+                       ref={...register('name')}
+                />
             </div>
             <div className="mt-[2.05rem]">
                 <label className="tracking-[0.2rem] font-bold text-[1.05rem] text-Verydarkviolet">CARD NUMBER</label>
-                <input className="border border-Lightgrayishviolet outline-none focus:border-Darkgrayishviolet block mt-[0.8rem] h-[4.25rem] rounded-xl text-[1.6rem] placeholder:text-[1.6rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem] w-[33rem]" type="text" placeholder="e.g. 1234 5678 9123 0000"/>
+                <input className="border border-Lightgrayishviolet outline-none focus:border-Darkgrayishviolet block mt-[0.8rem] h-[4.25rem] rounded-xl text-[1.6rem] placeholder:text-[1.6rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem] w-[33rem]" 
+                        type="text" 
+                        placeholder="e.g. 1234 5678 9123 0000"
+                        ref={...register('number')}
+                />
             </div>
             <div className="mt-[2.05rem] flex gap-[1rem]">
                <div>
                         <label className="tracking-[0.16rem] font-bold text-[1.05rem] text-Verydarkviolet">EXP. DATE (MM/YY)</label>
                         <div className="flex gap-3">
-                            <input className="border border-Lightgrayishviolet outline-none focus:border-Darkgrayishviolet block mt-[0.8rem] h-[4.25rem] w-[6.1rem] rounded-xl text-[1.6rem] placeholder:text-[1.6rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem]" type="text" placeholder="MM" />
-                            <input className="border border-Lightgrayishviolet outline-none focus:border-Darkgrayishviolet block mt-[0.8rem] h-[4.25rem] w-[6.1rem] rounded-xl text-[1.6rem] placeholder:text-[1.6rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem]" type="text" placeholder="YY"/>
+                            <input className="border border-Lightgrayishviolet outline-none focus:border-Darkgrayishviolet block mt-[0.8rem] h-[4.25rem] w-[6.1rem] rounded-xl text-[1.6rem] placeholder:text-[1.6rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem]"
+                                    type="text" 
+                                    placeholder="MM" 
+                                    ref={...register('MM')}
+                            />
+                            <input className="border border-Lightgrayishviolet outline-none focus:border-Darkgrayishviolet block mt-[0.8rem] h-[4.25rem] w-[6.1rem] rounded-xl text-[1.6rem] placeholder:text-[1.6rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem]" 
+                                    type="text" 
+                                    placeholder="YY"
+                                    ref={...register('YY')}
+                            />
                         </div>
                 </div> 
                 <div>
