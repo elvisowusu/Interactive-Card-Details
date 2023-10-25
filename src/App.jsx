@@ -28,7 +28,7 @@ function App() {
   },[])
 
   return (
-    <div>
+    <div className='font-SpaceGrotesk'>
       {state.screenWidth > 640? (<img src={desktop} alt='destop background'/>):(<img className='w-full' src={mobile} alt='moblie background'/>)}
       <Cards/>
       <Form/>
