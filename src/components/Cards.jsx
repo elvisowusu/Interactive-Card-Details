@@ -4,7 +4,7 @@ import {FaCircle,FaRegCircle} from 'react-icons/fa'
 
 export default function Cards(){
     return(
-        <div className="absolute top-[3.3rem] left-[1.7rem]">
+        <div className="absolute top-[3.3rem] left-[0.75rem]">
           <div className={`absolute top-[8.65rem] left-0   sm:relative  bg-[url('./assets/bg-card-front.png')] h-[15.3rem] w-[27.97rem] rounded-lg flex flex-col justify-between p-[1.8rem] right-[2rem]`}>
             <div className="flex items-center gap-3">
               <FaCircle className="w-[3.1rem] h-[3.1rem] text-White"/> 
