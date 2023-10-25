@@ -29,7 +29,9 @@ function App() {
 
   return (
     <div className='font-SpaceGrotesk'>
-      {state.screenWidth > 640? (<img src={desktop} alt='destop background'/>):(<img className='w-full' src={mobile} alt='moblie background'/>)}
+      <div className={` ${state.screenWidth >640?"bg-[url('./assets/bg-main-desktop.png')]":"bg-[url('./assets/bg-main-mobile.png')]"} bg-cover h-[17rem] w-[35rem]`}>
+        sfsdfh
+      </div>
       <Cards/>
       <Form/>
     </div>
