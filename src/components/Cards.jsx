@@ -11,8 +11,8 @@ export default function Cards(){
               <FaRegCircle className="w-[1.3rem] h-[1.3rem] text-Lightgrayishviolet"/>
             </div>
             <div>
-              <p className="text-[1.9rem] mb-[1.1rem] tracking-[0.15rem]">0000 0000 0000 0000</p>
-              <div className="flex justify-between text-Lightgrayishviolet mb-[0.2rem]">
+              <p className="text-[1.9rem] mb-[1rem] tracking-[0.15rem]">0000 0000 0000 0000</p>
+              <div className="flex justify-between text-Lightgrayishviolet mb-[0.05rem]">
                 <p className="tracking-[0.07rem]">JANE APPLESEED</p>
                 <p className="tracking-[0.1rem]">00/00</p>
               </div>
