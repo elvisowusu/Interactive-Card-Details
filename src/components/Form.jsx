@@ -1,10 +1,30 @@
 import React from "react";
 import {useForm} from 'react-hook-form'
+import {yupResolver} from '@hookform/resolvers/yup'
+import * as yup from 'yup'
 import logo from '../assets/card-logo.svg'
 import mark from '../assets/icon-complete.svg'
 
 export default function Form(){
-    const {register,handleSubmit}=useForm();
+    
+    const schema =yup.object().shape({
+        name:yup
+        .string()
+        .required(),
+        Number:yup
+        .number()
+        .required(),
+        MM:yup
+        .string()
+        .required(),
+        YY:yup
+        .number()
+        .required(),
+        
+    })
+    const {register,handleSubmit}=useForm({
+        resolver: yupResolver(schema)
+    });
 
     const onSubmit=(data)=>{
         console.log(data);
@@ -17,7 +37,7 @@ export default function Form(){
                 <input className="border border-Lightgrayishviolet outline-none focus:border-Darkgrayishviolet block mt-[0.8rem] h-[4.2rem] rounded-xl text-[1.6rem] placeholder:text-[1.6rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem] w-[33rem]"
                        type="text" 
                        placeholder="e.g Jane Appleased"
-                       ref={...register('name')}
+                       {...register("name")}
                 />
             </div>
             <div className="mt-[2.05rem]">
@@ -25,7 +45,7 @@ export default function Form(){
                 <input className="border border-Lightgrayishviolet outline-none focus:border-Darkgrayishviolet block mt-[0.8rem] h-[4.25rem] rounded-xl text-[1.6rem] placeholder:text-[1.6rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem] w-[33rem]" 
                         type="text" 
                         placeholder="e.g. 1234 5678 9123 0000"
-                        ref={...register('number')}
+                        {...register('Number')}
                 />
             </div>
             <div className="mt-[2.05rem] flex gap-[1rem]">
@@ -35,12 +55,12 @@ export default function Form(){
                             <input className="border border-Lightgrayishviolet outline-none focus:border-Darkgrayishviolet block mt-[0.8rem] h-[4.25rem] w-[6.1rem] rounded-xl text-[1.6rem] placeholder:text-[1.6rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem]"
                                     type="text" 
                                     placeholder="MM" 
-                                    ref={...register('MM')}
+                                    {...register('MM')}
                             />
                             <input className="border border-Lightgrayishviolet outline-none focus:border-Darkgrayishviolet block mt-[0.8rem] h-[4.25rem] w-[6.1rem] rounded-xl text-[1.6rem] placeholder:text-[1.6rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem]" 
                                     type="text" 
                                     placeholder="YY"
-                                    ref={...register('YY')}
+                                    {...register('YY')}
                             />
                         </div>
                 </div> 
