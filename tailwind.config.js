@@ -8,7 +8,7 @@ export default {
     extend: {
       colors:{
           'activeinputborder': 'hsl(249, 99%, 64%) to hsl(278, 94%, 30%)',
-          'Red(input errors)': 'hsl(0, 100%, 66%)',
+          'inputerrors': 'hsl(0, 100%, 66%)',
           'White': 'hsl(0, 0%, 100%)',
           'Lightgrayishviolet': 'hsl(270, 3%, 87%)',
           'Darkgrayishviolet': 'hsl(279, 6%, 55%)',
