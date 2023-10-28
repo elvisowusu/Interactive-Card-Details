@@ -2,7 +2,7 @@ import React from "react";
 import {FaCircle,FaRegCircle} from 'react-icons/fa'
 
 
-export default function Cards(){
+export default function Cards({name}){
     return(
         <div className="absolute top-[3.3rem] left-[0.75rem]">
           <div className={`absolute top-[8.65rem] left-0   sm:relative  bg-[url('./assets/bg-card-front.png')] h-[15.3rem] w-[27.97rem] rounded-lg flex flex-col justify-between p-[1.8rem] right-[2rem]`}>
@@ -13,7 +13,7 @@ export default function Cards(){
             <div>
               <p className="text-[1.9rem] mb-[1rem] tracking-[0.15rem]">0000 0000 0000 0000</p>
               <div className="flex justify-between text-Lightgrayishviolet mb-[0.05rem]">
-                <p className="tracking-[0.07rem]">JANE APPLESEED</p>
+                <p className="tracking-[0.07rem]">{name}</p>
                 <p className="tracking-[0.1rem]">00/00</p>
               </div>
             </div>
