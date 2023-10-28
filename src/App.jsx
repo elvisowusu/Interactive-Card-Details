@@ -37,8 +37,8 @@ function App({name}) {
 
   
   return (
-    <div className='relative font-SpaceGrotesk w-[35.5rem] xl:w-full flex flex-col xl:flex-row xl:h-[100vh] xl:gap-[20rem] xl:items-center'>
-      <div className={`${state.screenWidth >640?"bg-[url('./assets/bg-main-desktop.png')] bg-cover  h-[100vh]":"bg-[url('./assets/bg-main-mobile.png')]"} bg-cover h-[23rem] w-[35.5rem]`}></div>
+    <div className='relative font-SpaceGrotesk w-[35.5rem] md:w-full flex flex-col md:flex-row md:h-[100vh] xl:gap-[20rem] lg:gap-[10rem] md:items-center lg:bg-red-300 xl:bg-blue-400'>
+      <div className={`${state.screenWidth >640?"bg-[url('./assets/bg-main-desktop.png')] bg-cover  h-[100vh] lg:w-[32rem]":"bg-[url('./assets/bg-main-mobile.png')]"} bg-cover h-[23rem] w-[35.5rem]`}></div>
       < Cards name={state.name} cardNumber={state.cardNumber} expDate={state.expDate} year={state.year} cvc={state.cvc}/>
       <Form updateContent={updateName}/>
     </div>
