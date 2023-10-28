@@ -16,7 +16,8 @@ export default function Form(){
         .typeError("Can't be blank")
         .required("Can't be blank"),
         MM:yup
-        .string()
+        .number('Should be numeric')
+        .typeError('Requires')
         .required("Can't be blank"),
         YY:yup
         .number('YY is required')
@@ -55,12 +56,12 @@ export default function Form(){
                         placeholder="e.g. 1234 5678 9123 0000"
                         onInput={()=>{
                             let value = parseInt(e.target.value);
-                            if(!isNaN(value)|| value<1 || value>31){
+                            if(!isNaN(value)|| value < 1 || value > 16){
                                 value ='';
                             }else if (value === Math.floor(value)){
                                 value = value.toString();
                             }
-                            e.target.value=value;
+                            e.target.value = value;
                         } 
                         }
                         {...register('Number')}
@@ -75,6 +76,16 @@ export default function Form(){
                             <input className={`border border-Lightgrayishviolet outline-none focus:border-Darkgrayishviolet ${errors.MM? 'border-inputerrors focus:border-inputerrors':''} block mt-[0.8rem] h-[4.25rem] w-[6.1rem] rounded-xl text-[1.6rem] placeholder:text-[1.6rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem]`}
                                     type="number" 
                                     placeholder="MM" 
+                                    onInput={()=>{
+                                        let value = parseInt(e.target.value);
+                                        if(!isNaN(value)|| value < 1 || value > 12){
+                                            value ='';
+                                        }else if (value === Math.floor(value)){
+                                            value = value.toString();
+                                        }
+                                        e.target.value = value;
+                                    } 
+                                    }
                                     {...register('MM')}
                             />
                             <p className="text-inputerrors mt-3">{errors.MM?.message}</p>
@@ -83,6 +94,16 @@ export default function Form(){
                             <input className={`border border-Lightgrayishviolet outline-none focus:border-Darkgrayishviolet ${errors.YY? 'border-inputerrors focus:border-inputerrors':''} block mt-[0.8rem] h-[4.25rem] w-[6.1rem] rounded-xl text-[1.6rem] placeholder:text-[1.6rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem]`}
                                     type="text" 
                                     placeholder="YY"
+                                    onInput={()=>{
+                                        let value = parseInt(e.target.value);
+                                        if(!isNaN(value)|| value < 1 || value >= 2023){
+                                            value ='';
+                                        }else if (value === Math.floor(value)){
+                                            value = value.toString();
+                                        }
+                                        e.target.value = value;
+                                    } 
+                                    }
                                     {...register('YY')}
                             />
                             <p className="text-inputerrors mt-3">{errors.YY?.message}</p>
