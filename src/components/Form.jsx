@@ -78,7 +78,7 @@ export default function Form(){
                                     placeholder="MM" 
                                     onInput={()=>{
                                         let value = parseInt(e.target.value);
-                                        if(!isNaN(value)|| value < 1 || value > 12){
+                                        if(!isNaN(value)|| value < 1 || value >= 13){
                                             value ='';
                                         }else if (value === Math.floor(value)){
                                             value = value.toString();
