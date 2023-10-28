@@ -14,7 +14,7 @@ export default function Cards({name,cardNumber,expDate,year, cvc}){
               <p className="text-[1.9rem] mb-[1rem] tracking-[0.15rem]">{cardNumber}</p>
               <div className="flex justify-between text-Lightgrayishviolet mb-[0.05rem]">
                 <p className="tracking-[0.07rem]">{name}</p>
-                <p className="tracking-[0.1rem]">{expDate}{year}</p>
+                <p className="tracking-[0.1rem]">{expDate}/{year}</p>
               </div>
             </div>
           </div>

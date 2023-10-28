@@ -40,7 +40,7 @@ function App({name}) {
     <div className='relative font-SpaceGrotesk w-[35.5rem] md:w-full flex flex-col md:flex-row md:h-[100vh] md:gap-[20rem] md:items-center'>
       <div className={`${state.screenWidth >640?"bg-[url('./assets/bg-main-desktop.png')] bg-cover  h-[100vh]":"bg-[url('./assets/bg-main-mobile.png')]"} bg-cover h-[23rem] w-[35.5rem]`}></div>
       < Cards name={state.name} cardNumber={state.cardNumber} expDate={state.expDate} year={state.year} cvc={state.cvc}/>
-      <Form name={name} updateContent={updateName}/>
+      <Form updateContent={updateName}/>
     </div>
   )
 }

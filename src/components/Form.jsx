@@ -35,7 +35,11 @@ export default function Form({name,updateContent}){
 
     const onSubmit=(data)=>{
         console.log(data);
-        updateContent(data.name)
+        updateContent('name',data.name);
+        updateContent('cardNumber',data.Number);
+        updateContent('expDate', data.MM);
+        updateContent('year', data.YY);
+        updateContent('cvc', data.cvc);
         reset();
     }
     return(
