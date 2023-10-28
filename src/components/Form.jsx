@@ -50,7 +50,7 @@ export default function Form({name,updateContent}){
                 />
                 <p className="text-inputerrors mt-3 text-[0.7rem] md:mt-1">{errors.name?.message}</p>
             </div>
-            <div className="mt-[2.05rem] md:mt-1">
+            <div className="mt-[2.05rem] md:mt-4">
                 <label className="tracking-[0.2rem] font-bold text-[1.05rem] md:text-[0.7rem] text-Verydarkviolet">CARD NUMBER</label>
                 <input className={`border border-Lightgrayishviolet outline-none focus:border-Darkgrayishviolet ${errors.Number? 'border-inputerrors focus:border-inputerrors':''} block mt-[0.8rem] md:mt-[0.2rem] h-[4.25rem] md:h-[3rem] rounded-xl text-[1.6rem] md:text-[1.4rem] placeholder:text-[1.6rem] md:placeholder:text-[1.2rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem] w-[33rem] md:px-5 md:pb-2  md:w-[26rem]`}
                         type="number" 
@@ -69,7 +69,7 @@ export default function Form({name,updateContent}){
                 />
                 <p className="text-inputerrors mt-3 text-[0.7rem] md:mt-1">{errors.Number?.message}</p>
             </div>
-            <div className="mt-[2.05rem] md:mt-1 flex gap-[1rem] md:gap-[0.5rem]">
+            <div className="mt-[2.05rem] md:mt-4 flex gap-[1rem] md:gap-[0.5rem]">
                <div>
                         <label className="tracking-[0.16rem] font-bold text-[1.05rem] md:text-[0.7rem] text-Verydarkviolet">EXP. DATE (MM/YY)</label>
                         <div className="flex gap-3 md:gap-2">
@@ -92,7 +92,7 @@ export default function Form({name,updateContent}){
                             <p className="text-inputerrors mt-3 text-[0.7rem] md:mt-1">{errors.MM?.message}</p>
                             </div>
                             <div>
-                            <input className={`border border-Lightgrayishviolet outline-none focus:border-Darkgrayishviolet ${errors.YY? 'border-inputerrors focus:border-inputerrors':''} block mt-[0.8rem] md:mt-[0.2rem] h-[4.25rem] md:h-[3rem] w-[6.1rem] rounded-xl text-[1.6rem] md:text-[1.4rem] placeholder:text-[1.6rem] md:placeholder:text-[1.5rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem] md:px-3 md:pb-2  md:w-[5rem]`}
+                            <input className={`border border-Lightgrayishviolet outline-none focus:border-Darkgrayishviolet ${errors.YY? 'border-inputerrors focus:border-inputerrors':''} block mt-[0.8rem] md:mt-[0.2rem] h-[4.25rem] md:h-[3rem] w-[6.1rem] rounded-xl text-[1.6rem] md:text-[1.4rem] placeholder:text-[1.6rem] md:placeholder:text-[1.5rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem] md:px-0 md:pl-2 md:pb-2  md:w-[5rem]`}
                                     type="number" 
                                     placeholder="YY"
                                     onInput={()=>{
