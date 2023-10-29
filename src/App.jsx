@@ -1,11 +1,12 @@
 import { useEffect, useReducer, useState} from 'react'
 import desktop from './assets/bg-main-desktop.png'
 import mobile from './assets/bg-main-mobile.png'
-import {} from 'react'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 import './App.css'
 import Cards from './components/Cards'
 import Form from './components/Form'
+import Completed from './components/Completed'
 
 const reducer =(state,action)=>{
   switch(action.type){
