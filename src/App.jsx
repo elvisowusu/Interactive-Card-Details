@@ -19,7 +19,7 @@ const reducer =(state,action)=>{
   }
 }
 
-function App({name}) {
+function App() {
   const [state,dispatch]=useReducer(reducer,{screenWidth:window.innerWidth,name:'JANE APPLEASED',cardNumber:'0000 0000 0000 0000',expDate:0,year:0,cvc:0})
   useEffect(()=>{
     const handleResize =()=>{
@@ -40,7 +40,7 @@ function App({name}) {
   return (
     <div className='relative font-SpaceGrotesk w-[35.5rem] md:w-full flex flex-col md:flex-row md:h-[100vh] xl:gap-[20rem] lg:gap-[14rem] md:gap-[13rem] md:items-center bg-orange-400 sm:bg-green-500 md:bg-red-500'>
       <div className={`${state.screenWidth >768?"bg-[url('./assets/bg-main-desktop.png')] bg-cover  h-[100vh] md:w-[21rem] lg:w-[30rem] xl:w-[35rem]":"bg-[url('./assets/bg-main-mobile.png')]"} bg-cover h-[23rem] w-[35.5rem]`}></div>
-      < Cards name={state.name} cardNumber={state.cardNumber} expDate={state.expDate} year={state.year} cvc={state.cvc}/>
+      <Cards name={state.name} cardNumber={state.cardNumber} expDate={state.expDate} year={state.year} cvc={state.cvc}/>
       <Form updateContent={updateName}/>
     </div>
   )

@@ -5,7 +5,7 @@ import * as yup from 'yup'
 import logo from '../assets/card-logo.svg'
 import mark from '../assets/icon-complete.svg'
 
-export default function Form({name,updateContent}){
+export default function Form({updateContent}){
     
     const schema =yup.object().shape({
         name:yup
@@ -35,7 +35,7 @@ export default function Form({name,updateContent}){
 
     const onSubmit=(data)=>{
         console.log(data);
-        updateContent('name',data.name);
+        updateContent('name', data.name);
         updateContent('cardNumber',data.Number);
         updateContent('expDate', data.MM);
         updateContent('year', data.YY);
