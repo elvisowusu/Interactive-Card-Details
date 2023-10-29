@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export default completed =()=>{
+export default function Completed (){
     return(
         <div>
           heheheh  
