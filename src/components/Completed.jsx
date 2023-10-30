@@ -1,6 +1,6 @@
 import React from "react";
 import icon from '../assets/icon-complete.svg'
-
+import {Link} from 'react-router-dom'
 
 
 export default function Completed (){
@@ -9,7 +9,9 @@ export default function Completed (){
           <div><img src={icon} alt="" /></div> 
           <h1>THANK YOU </h1>
           <p>We've added your card details</p>
+          <Link>
           <button>Continue</button>
+          </Link>
         </div>
     )
 }
