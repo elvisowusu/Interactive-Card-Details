@@ -2,8 +2,6 @@ import React from "react";
 import {useForm} from 'react-hook-form'
 import {yupResolver} from '@hookform/resolvers/yup'
 import * as yup from 'yup'
-import logo from '../assets/card-logo.svg'
-import mark from '../assets/icon-complete.svg'
 import {Link} from 'react-router-dom'
 
 export default function Form({updateContent}){
