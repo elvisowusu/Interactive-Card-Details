@@ -4,6 +4,7 @@ import {yupResolver} from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import logo from '../assets/card-logo.svg'
 import mark from '../assets/icon-complete.svg'
+import {Link} from 'react-router-dom'
 
 export default function Form({updateContent}){
     
@@ -125,7 +126,9 @@ export default function Form({updateContent}){
                     <p className="text-inputerrors mt-3 text-[0.7rem] md:mt-1">{errors.cvc?.message}</p>
                 </div>
             </div>
-            <button className="text-[1.6rem] md:text-[1rem] h-[4.25rem] md:h-[3rem] rounded-md bg-Verydarkviolet text-white mt-[2.85rem] md:mt-[1.9rem]">Confirm</button>
+            <Link to='/Completed' className="text-[1.6rem] md:text-[1rem] h-[4.25rem] md:h-[3rem] rounded-md bg-Verydarkviolet text-white mt-[2.85rem] md:mt-[1.9rem]">
+                 <button >Confirm</button>
+            </Link>
 
         </form>
         
