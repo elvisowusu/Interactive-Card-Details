@@ -9,8 +9,8 @@ export default function Completed (){
           <div><img src={icon} alt="" /></div> 
           <h1>THANK YOU </h1>
           <p>We've added your card details</p>
-          <Link>
-          <button>Continue</button>
+          <Link className="text-[1.6rem] md:text-[1rem] h-[4.25rem] md:h-[3rem] rounded-md bg-Verydarkviolet text-white mt-[2.85rem] md:mt-[1.9rem] flex justify-center">
+             <button>Continue</button>
           </Link>
         </div>
     )
