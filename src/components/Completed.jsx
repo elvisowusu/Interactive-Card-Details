@@ -1,4 +1,6 @@
 import React from "react";
+import icon from '../assets/icon-complete.svg'
+
 
 
 export default function Completed (){
