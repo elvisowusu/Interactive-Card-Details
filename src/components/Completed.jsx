@@ -7,7 +7,7 @@ export default function Completed (){
     return(
         <div className="mt-[8.88rem] px-[1.2rem] mb-[4rem]">
           <div className="flex flex-col justify-center items-center">
-          <img className="mb-[3rem] " src={icon} alt="" />
+          <img className="mb-[3rem] h-[8rem]" src={icon} alt="" />
           <h1 className="text-Verydarkviolet text-[2.6rem] tracking-[0.4rem]">THANK YOU!</h1>
           <p>We've added your card details</p>
           </div>
