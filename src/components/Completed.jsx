@@ -9,7 +9,7 @@ export default function Completed (){
           <div className="flex flex-col justify-center items-center">
           <img className="mb-[3rem] h-[7rem]" src={icon} alt="" />
           <h1 className="text-Verydarkviolet text-[2.6rem] tracking-[0.4rem] mb-5">THANK YOU!</h1>
-          <p className="text-[1.8rem] mb-4">We've added your card details</p>
+          <p className="text-[1.8rem] text-Darkgrayishviolet mb-4">We've added your card details</p>
           </div>
           <Link to='/' className="text-[1.6rem] md:text-[1rem] h-[4.25rem] md:h-[3rem] rounded-md bg-Verydarkviolet text-white mt-[2.85rem] md:mt-[1.9rem] flex justify-center">
              <button>Continue</button>
