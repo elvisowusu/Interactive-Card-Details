@@ -11,7 +11,7 @@ export default function Cards({name,cardNumber,expDate,year,cvc}){
               <FaRegCircle className="w-[1.3rem] h-[1.3rem] text-Lightgrayishviolet"/>
             </div>
             <div>
-              <p className="text-[1.9rem] mb-[1rem] tracking-[0.15rem]">{cardNumber}</p>
+              <p className="text-[1.9rem] text-Lightgrayishviolet mb-[1rem] tracking-[0.15rem]">{cardNumber}</p>
               <div className="flex justify-between text-Lightgrayishviolet mb-[0.05rem]">
                 <p className="tracking-[0.07rem]">{name}</p>
                 <p className="tracking-[0.1rem]">{expDate}/{year}</p>
