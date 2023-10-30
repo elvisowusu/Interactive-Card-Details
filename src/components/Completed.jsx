@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 
 export default function Completed (){
     return(
-        <div className="mt-[8.88rem] px-[1.2rem]">
+        <div className="mt-[8.88rem] px-[1.2rem] mb-[4rem]">
           <div className="flex flex-col justify-center items-center">
           <img className="mb-[3rem] " src={icon} alt="" />
           <h1 className="text-Verydarkviolet text-[2.6rem] tracking-[0.4rem]">THANK YOU!</h1>
