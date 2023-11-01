@@ -2,7 +2,7 @@ import React from "react";
 import {useForm} from 'react-hook-form'
 import {yupResolver} from '@hookform/resolvers/yup'
 import * as yup from 'yup'
-import {Link} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 export default function Form({updateContent}){
     
@@ -13,6 +13,7 @@ export default function Form({updateContent}){
         Number:yup
         .number('Wrong format, numbers only')
         .typeError("Can't be blank")
+        .positive()
         .required("Can't be blank"),
         MM:yup
         .number('Should be numeric')
@@ -41,6 +42,8 @@ export default function Form({updateContent}){
         updateContent('cvc', data.cvc);
         reset();
     }
+
+    let navigate = useNavigate();
     return(
         
         <form onSubmit={handleSubmit(onSubmit)} className="mt-[8.88rem] px-[1.2rem] flex flex-col mb-[4rem]">
@@ -58,16 +61,6 @@ export default function Form({updateContent}){
                 <input className={`border border-Lightgrayishviolet outline-none focus:border-Darkgrayishviolet ${errors.Number? 'border-inputerrors focus:border-inputerrors':''} block mt-[0.8rem] md:mt-[0.2rem] h-[4.25rem] md:h-[3rem] rounded-md text-[1.6rem] md:text-[1.4rem] placeholder:text-[1.6rem] md:placeholder:text-[1.2rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem] w-[33rem] md:px-5 md:pb-2  md:w-[26rem]`}
                         type="number" 
                         placeholder="e.g. 1234 5678 9123 0000"
-                        onInput={()=>{
-                            let value = parseInt(e.target.value);
-                            if(!isNaN(value)|| value < 1 || value > 16){
-                                value ='';
-                            }else if (value === Math.floor(value)){
-                                value = value.toString();
-                            }
-                            e.target.value = value;
-                        } 
-                        }
                         {...register('Number')}
                 />
                 <p className="text-inputerrors mt-3 text-[0.7rem] md:mt-1">{errors.Number?.message}</p>
@@ -80,16 +73,6 @@ export default function Form({updateContent}){
                             <input className={`border border-Lightgrayishviolet outline-none focus:border-Darkgrayishviolet ${errors.MM? 'border-inputerrors focus:border-inputerrors':''} block mt-[0.8rem] md:mt-[0.2rem] h-[4.25rem] md:h-[3rem] w-[6.1rem] rounded-md text-[1.6rem] md:text-[1.4rem] placeholder:text-[1.6rem] md:placeholder:text-[1.5rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem] md:px-0 md:pl-2 md:pb-2  md:w-[5rem]`}
                                     type="number" 
                                     placeholder="MM"
-                                    onInput={()=>{
-                                        let value = parseInt(e.target.value);
-                                        if(!isNaN(value)|| value < 1 || value >= 13){
-                                            value ='';
-                                        }else if (value === Math.floor(value)){
-                                            value = value.toString();
-                                        }
-                                        e.target.value = value;
-                                    } 
-                                    }
                                     {...register('MM')}
                             />
                             <p className="text-inputerrors mt-3 text-[0.7rem] md:mt-1">{errors.MM?.message}</p>
@@ -98,16 +81,6 @@ export default function Form({updateContent}){
                             <input className={`border border-Lightgrayishviolet outline-none focus:border-Darkgrayishviolet ${errors.YY? 'border-inputerrors focus:border-inputerrors':''} block mt-[0.8rem] md:mt-[0.2rem] h-[4.25rem] md:h-[3rem] w-[6.1rem] rounded-md text-[1.6rem] md:text-[1.4rem] placeholder:text-[1.6rem] md:placeholder:text-[1.5rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem] md:px-0 md:pl-2 md:pb-2  md:w-[5rem]`}
                                     type="number" 
                                     placeholder="YY"
-                                    onInput={()=>{
-                                        let value = parseInt(e.target.value);
-                                        if(!isNaN(value)|| value < 1 || value >= 2023){
-                                            value ='';
-                                        }else if (value === Math.floor(value)){
-                                            value = value.toString();
-                                        }
-                                        e.target.value = value;
-                                    } 
-                                    }
                                     {...register('YY')}
                             />
                             <p className="text-inputerrors mt-3 text-[0.7rem] md:mt-1">{errors.YY?.message}</p>
@@ -124,10 +97,7 @@ export default function Form({updateContent}){
                     <p className="text-inputerrors mt-3 text-[0.7rem] md:mt-1">{errors.cvc?.message}</p>
                 </div>
             </div>
-            <Link to='/Completed' className="text-[1.6rem] md:text-[1rem] h-[4.25rem] md:h-[3rem] rounded-md bg-Verydarkviolet text-white mt-[2.85rem] md:mt-[1.9rem] flex justify-center">
-                 <button >Confirm</button>
-            </Link>
-
+                 <button onClick={()=>{navigate("/Completed")}} className="text-[1.6rem] md:text-[1rem] h-[4.25rem] md:h-[3rem] rounded-md bg-Verydarkviolet text-white mt-[2.85rem] md:mt-[1.9rem]">Confirm</button>
         </form>
         
     )
