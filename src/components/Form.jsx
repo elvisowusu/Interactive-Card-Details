@@ -58,7 +58,7 @@ export default function Form({updateContent}){
                 <input className={`border border-Lightgrayishviolet outline-none focus:border-Darkgrayishviolet ${errors.Number? 'border-inputerrors focus:border-inputerrors':''} block mt-[0.8rem] md:mt-[0.2rem] h-[4.25rem] md:h-[3rem] rounded-md text-[1.6rem] md:text-[1.4rem] placeholder:text-[1.6rem] md:placeholder:text-[1.2rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem] w-[33rem] md:px-5 md:pb-2  md:w-[26rem]`}
                         type="number" 
                         placeholder="e.g. 1234 5678 9123 0000"
-                        onInput={(e)=>{
+                        onInput={()=>{
                             let value = parseInt(e.target.value);
                             if(!isNaN(value)|| value < 1 || value > 16){
                                 value ='';
@@ -79,8 +79,8 @@ export default function Form({updateContent}){
                             <div>
                             <input className={`border border-Lightgrayishviolet outline-none focus:border-Darkgrayishviolet ${errors.MM? 'border-inputerrors focus:border-inputerrors':''} block mt-[0.8rem] md:mt-[0.2rem] h-[4.25rem] md:h-[3rem] w-[6.1rem] rounded-md text-[1.6rem] md:text-[1.4rem] placeholder:text-[1.6rem] md:placeholder:text-[1.5rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem] md:px-0 md:pl-2 md:pb-2  md:w-[5rem]`}
                                     type="number" 
-                                    placeholder="MM" 
-                                    onInput={(e)=>{
+                                    placeholder="MM"
+                                    onInput={()=>{
                                         let value = parseInt(e.target.value);
                                         if(!isNaN(value)|| value < 1 || value >= 13){
                                             value ='';
@@ -98,7 +98,7 @@ export default function Form({updateContent}){
                             <input className={`border border-Lightgrayishviolet outline-none focus:border-Darkgrayishviolet ${errors.YY? 'border-inputerrors focus:border-inputerrors':''} block mt-[0.8rem] md:mt-[0.2rem] h-[4.25rem] md:h-[3rem] w-[6.1rem] rounded-md text-[1.6rem] md:text-[1.4rem] placeholder:text-[1.6rem] md:placeholder:text-[1.5rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem] md:px-0 md:pl-2 md:pb-2  md:w-[5rem]`}
                                     type="number" 
                                     placeholder="YY"
-                                    onInput={(e)=>{
+                                    onInput={()=>{
                                         let value = parseInt(e.target.value);
                                         if(!isNaN(value)|| value < 1 || value >= 2023){
                                             value ='';
