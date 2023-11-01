@@ -5,6 +5,7 @@ import './App.css'
 import Cards from './components/Cards'
 import Form from './components/Form'
 import Completed from './components/Completed'
+import ErrorPage from './components/ErrorPage'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
 const reducer =(state,action)=>{
@@ -44,6 +45,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Form updateContent={updateName}/>}/> 
           <Route path='/Completed' element={<Completed/>}/>
+          <Route path='*' element={<ErrorPage/>} />
         </Routes>
       </BrowserRouter>
     </div>
