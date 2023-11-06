@@ -14,17 +14,26 @@ export default function Form({updateContent}){
         .number('Wrong format, numbers only')
         .typeError("Can't be blank")
         .positive()
+        .test('is-sixteen-digits','Card number must be 16 digits',(value)=>{
+            return value.toString().replace(/\D/g,'').length ===16;
+        })
         .required("Can't be blank"),
         MM:yup
         .number('Should be numeric')
-        .typeError('Requires')
+        .typeError("Can't be blank")
+        .min(1,'MM is 1 or more')
+        .max(12,"MM can't exceed 12")
         .required("Can't be blank"),
         YY:yup
         .number('YY is required')
         .typeError("Can't be blank")
+        .min(1,'MM is 1 or more')
+        .max(2023,"MM can't exceed 2023")
         .required("Can't be blank"),
         cvc:yup
         .number()
+        .min(1,'MM is 1 or more')
+        .max(3,"MM can't exceed 3")
         .typeError("Can't be blank")
         .required("Can't be blank"),
         
