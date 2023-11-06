@@ -42,6 +42,7 @@ export default function Form({updateContent}){
         updateContent('year', data.YY);
         updateContent('cvc', data.cvc);
         reset();
+        navigate("/Completed");
     }
 
     return(
@@ -97,7 +98,7 @@ export default function Form({updateContent}){
                     <p className="text-inputerrors mt-3 text-[0.7rem] md:mt-1">{errors.cvc?.message}</p>
                 </div>
             </div>
-                 <button onClick={()=>{navigate("/Completed")}} className="text-[1.6rem] md:text-[1rem] h-[4.25rem] md:h-[3rem] rounded-md bg-Verydarkviolet text-white mt-[2.85rem] md:mt-[1.9rem]">Confirm</button>
+                 <button className="text-[1.6rem] md:text-[1rem] h-[4.25rem] md:h-[3rem] rounded-md bg-Verydarkviolet text-white mt-[2.85rem] md:mt-[1.9rem]">Confirm</button>
         </form>
         
     )
