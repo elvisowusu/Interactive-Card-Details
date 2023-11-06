@@ -33,6 +33,7 @@ export default function Form({updateContent}){
         resolver: yupResolver(schema)
     });
 
+    let navigate = useNavigate();
     const onSubmit=(data)=>{
         console.log(data);
         updateContent('name', data.name);
@@ -43,7 +44,6 @@ export default function Form({updateContent}){
         reset();
     }
 
-    let navigate = useNavigate();
     return(
         
         <form onSubmit={handleSubmit(onSubmit)} className="mt-[8.88rem] px-[1.2rem] flex flex-col mb-[4rem]">
@@ -97,11 +97,7 @@ export default function Form({updateContent}){
                     <p className="text-inputerrors mt-3 text-[0.7rem] md:mt-1">{errors.cvc?.message}</p>
                 </div>
             </div>
-                 <button onClick={()=>{
-                    if(onSubmit===True){
-                        navigate("/Completed")
-                    }
-                 }} className="text-[1.6rem] md:text-[1rem] h-[4.25rem] md:h-[3rem] rounded-md bg-Verydarkviolet text-white mt-[2.85rem] md:mt-[1.9rem]">Confirm</button>
+                 <button onClick={()=>{navigate("/Completed")}} className="text-[1.6rem] md:text-[1rem] h-[4.25rem] md:h-[3rem] rounded-md bg-Verydarkviolet text-white mt-[2.85rem] md:mt-[1.9rem]">Confirm</button>
         </form>
         
     )
