@@ -132,6 +132,12 @@ export default function Form({ updateContent }) {
             placeholder="e.g. 123"
             {...register('cvc')}
             maxLength={3}
+            onChange={(e) => {
+              if (e.target.value > 999) {
+                e.target.value = 999;
+              }
+            
+            }}
           />
           <p className="text-inputerrors mt-3 text-[0.7rem] md:mt-1">{errors.cvc?.message}</p>
         </div>
