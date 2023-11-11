@@ -78,6 +78,13 @@ export default function Form({ updateContent }) {
           type="text"
           placeholder="e.g. 1234 5678 9123 0000"
           {...register('Number')}
+          onBeforeInput={(e) => {
+            const char = e.data;
+            if (char && !/\d/.test(char)) {
+              e.preventDefault();
+            }
+          
+          }}
           maxLength={19}
           onChange={(e) => {
               e.target.value = formatCardNumber(e.target.value);
