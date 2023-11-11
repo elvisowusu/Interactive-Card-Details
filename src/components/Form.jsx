@@ -11,6 +11,7 @@ export default function Form({ updateContent }) {
       .required("Can't be blank"),
     Number: yup
       .string()
+      .matches(/^\d{16}$/, 'Card number must be 16 digits')
       .required("Can't be blank"),
     MM: yup
       .number('Should be numeric')
