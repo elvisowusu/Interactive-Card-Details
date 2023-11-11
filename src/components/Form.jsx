@@ -98,16 +98,28 @@ export default function Form({ updateContent }) {
                 type="number"
                 placeholder="MM"
                 {...register('MM')}
+                maxLength={2}
+                onChange={(e) => {
+                  if (e.target.value > 12) {
+                    e.target.value = 12;
+                  }
+                }}     
               />
-              <p className="text-inputerrors mt-3 text-[0.7rem] md:mt-1">{errors.MM?.message}</p>
-            </div>
-            <div>
-              <input
-                className={`border border-Lightgrayishviolet outline-none focus-border-Darkgrayishviolet ${errors.YY ? 'border-inputerrors focus-border-inputerrors' : ''} block mt-[0.8rem] md:mt-[0.2rem] h-[4.25rem] md:h-[3rem] w-[6.1rem] rounded-md text-[1.6rem] md:text-[1.4rem] placeholder:text-[1.6rem] md:placeholder:text-[1.5rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem] md:px-0 md:pl-2 md:pb-2  md:w-[5rem]`}
-                type="number"
-                placeholder="YY"
-                {...register('YY')}
-              />
+              <p className="text-inputerrors mt-3 text-[0.7rem] md:mt-1">{errors.YY?.message}</p>
+                </div>
+                <div>
+                  <input
+                    className={`border border-Lightgrayishviolet outline-none focus-border-Darkgrayishviolet ${errors.YY ? 'border-inputerrors focus-border-inputerrors' : ''} block mt-[0.8rem] md:mt-[0.2rem] h-[4.25rem] md:h-[3rem] w-[6.1rem] rounded-md text-[1.6rem] md:text-[1.4rem] placeholder:text-[1.6rem] md:placeholder:text-[1.5rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem] md:px-0 md:pl-2 md:pb-2  md:w-[5rem]`}
+                    type="number"
+                    placeholder="YY"
+                    {...register('YY')}
+                    maxLength={4}
+                    onChange={(e) => {
+                      if (e.target.value > 2023) {
+                        e.target.value = 2023;
+                      }
+                    }}
+                  />
               <p className="text-inputerrors mt-3 text-[0.7rem] md:mt-1">{errors.YY?.message}</p>
             </div>
           </div>
@@ -119,6 +131,7 @@ export default function Form({ updateContent }) {
             type="number"
             placeholder="e.g. 123"
             {...register('cvc')}
+            maxLength={3}
           />
           <p className="text-inputerrors mt-3 text-[0.7rem] md:mt-1">{errors.cvc?.message}</p>
         </div>
