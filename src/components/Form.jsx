@@ -11,7 +11,6 @@ export default function Form({ updateContent }) {
       .required("Can't be blank"),
     Number: yup
       .string()
-      .matches(/^\d{16}$/, 'Card number must be 16 digits')
       .required("Can't be blank"),
     MM: yup
       .number('Should be numeric')
@@ -27,8 +26,6 @@ export default function Form({ updateContent }) {
       .required("Can't be blank"),
     cvc: yup
       .number()
-      .min(1, 'MM is 1 or more')
-      .max(3, "MM can't exceed 3")
       .typeError("Can't be blank")
       .required("Can't be blank"),
   });
@@ -110,7 +107,7 @@ export default function Form({ updateContent }) {
                 </div>
                 <div>
                   <input
-                    className={`border border-Lightgrayishviolet outline-none focus-border-Darkgrayishviolet ${errors.YY ? 'border-inputerrors focus-border-inputerrors' : ''} block mt-[0.8rem] md:mt-[0.2rem] h-[4.25rem] md:h-[3rem] w-[6.1rem] rounded-md text-[1.6rem] md:text-[1.4rem] placeholder:text-[1.6rem] md:placeholder:text-[1.5rem] placeholder:text-Darkgrayishviolet pt-2 px-[1.5rem] md:px-0 md:pl-2 md:pb-2  md:w-[5rem]`}
+                    className={`border border-Lightgrayishviolet outline-none focus-border-Darkgrayishviolet ${errors.YY ? 'border-inputerrors focus-border-inputerrors' : ''} block mt-[0.8rem] md:mt-[0.2rem] h-[4.25rem] md:h-[3rem] w-[6.1rem] rounded-md text-[1.6rem] md:text-[1.4rem] placeholder:text-[1.6rem] md:placeholder:text-[1.5rem] placeholder:text-Darkgrayishviolet pt-2 px-[1rem] md:px-0 md:pl-2 md:pb-2  md:w-[5rem]`}
                     type="number"
                     placeholder="YY"
                     {...register('YY')}
