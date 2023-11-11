@@ -20,7 +20,7 @@ const reducer =(state,action)=>{
 }
 
 function App() {
-  const [state,dispatch]=useReducer(reducer,{screenWidth:window.innerWidth,name:'JANE APPLEASED',cardNumber:'0000 0000 0000 0000',expDate:0,year:0,cvc:'000'})
+  const [state,dispatch]=useReducer(reducer,{screenWidth:window.innerWidth,name:'JANE APPLEASED',cardNumber:'0000 0000 0000 0000',expDate:'00',year:'00',cvc:'000'})
   useEffect(()=>{
     const handleResize =()=>{
         dispatch({type:'CHANGESCREEN'});
